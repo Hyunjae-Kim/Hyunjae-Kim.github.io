@@ -7,7 +7,8 @@
     "teaser": "How do temporal constraints shape music-selective representations?",
     "overview": "This project investigates how spectrotemporal modulation constraints can give rise to human-like cortical music selectivity in deep auditory models.",
     "topic": "Computational audition",
-    "year": null
+    "year": null,
+    "url": null
   },
   {
     "slug": "brain-alignment",
@@ -17,7 +18,8 @@
     "teaser": "Connecting music representations to the auditory cortex.",
     "overview": "This project investigates representational alignment between deep audio models and human brain responses, asking how representations in music foundation models relate to those in the auditory cortex.",
     "topic": "Music & the brain",
-    "year": null
+    "year": null,
+    "url": null
   },
   {
     "slug": "spatial-audio",
@@ -27,86 +29,95 @@
     "teaser": "Understanding immersive listening through human brain responses.",
     "overview": "This project uses human EEG and naturalistic listening to investigate the neural correlates of immersive spatial audio.",
     "topic": "Music & the brain",
-    "year": null
+    "year": null,
+    "url": null
   },
   {
     "slug": "audio-lottery-tickets",
     "title": "Transferable Audio Lottery Tickets: Gradient Accumulation for Extreme Sparsity",
     "authors": "H Kim, J Nam, KM Lee",
-    "venue": "ICASSP \u00b7 2026",
+    "venue": "ICASSP · 2026",
     "teaser": "Exploring sparse and transferable audio models.",
     "overview": "A study of gradient accumulation for extreme sparsity in audio models, presented at the IEEE International Conference on Acoustics, Speech and Signal Processing.",
     "topic": "Audio machine learning",
-    "year": 2026
+    "year": 2026,
+    "url": "https://ieeexplore.ieee.org/document/11461958"
   },
   {
     "slug": "musical-emotion",
     "title": "Musical Emotion Under Cochlear Implant Listening: Human Perception and Foundation Model Representations of Human-Composed and AI-Generated Music",
     "authors": "T Song, H Kim, KM Lee",
-    "venue": "ISMIR \u00b7 2026",
+    "venue": "ISMIR · 2026",
     "teaser": "Musical emotion across human perception and model representations.",
     "overview": "This work examines musical emotion under cochlear implant listening, considering human perception and foundation model representations of human-composed and AI-generated music.",
     "topic": "Music & the brain",
-    "year": 2026
+    "year": 2026,
+    "url": "https://ismir2026program.ismir.net/poster_271.html"
   },
   {
     "slug": "gender-music",
     "title": "Gender Bias and Sonic Gender Performance in AI-Generated Music: Representation, Expression, and Perception",
     "authors": "M Bae, H Kim, KM Lee",
-    "venue": "AIES \u00b7 2026",
+    "venue": "AIES · 2026",
     "teaser": "Examining representation and perception in AI-generated music.",
     "overview": "This work examines gender bias and sonic gender performance in AI-generated music through representation, expression, and perception.",
     "topic": "Music & AI",
-    "year": 2026
+    "year": 2026,
+    "url": null
   },
   {
     "slug": "music-preference",
     "title": "Predicting Music Preference Using Deep Learning on Electroencephalogram and Audio Features",
     "authors": "S Cho, H Kim, KM Lee",
-    "venue": "The Journal of the Acoustical Society of Korea \u00b7 2026",
+    "venue": "The Journal of the Acoustical Society of Korea · 2026",
     "teaser": "Bringing together EEG and audio to study music preference.",
     "overview": "This work explores the prediction of music preference using deep learning with electroencephalogram and audio features.",
     "topic": "Music & the brain",
-    "year": 2026
+    "year": 2026,
+    "url": "https://doi.org/10.7776/ASK.2026.45.4.362"
   },
   {
     "slug": "dynamic-emotion",
     "title": "Which audio features can predict the dynamic musical emotions of both composers and listeners?",
     "authors": "EJ Oh, H Kim, KM Lee",
-    "venue": "ISMIR \u00b7 2024",
+    "venue": "ISMIR · 2024",
     "teaser": "Relating audio features to changing musical emotions.",
     "overview": "This work investigates audio features for predicting the dynamic musical emotions of composers and listeners.",
     "topic": "Music & the brain",
-    "year": 2024
+    "year": 2024,
+    "url": "https://doi.org/10.5281/zenodo.14877347"
   },
   {
     "slug": "music-familiarity",
     "title": "Enhancing Predictive Models of Music Familiarity with EEG: Insights from Fans and Non-fans of K-pop Group NCT127",
     "authors": "S Park, H Kim, KM Lee",
-    "venue": "ISMIR \u00b7 2024",
+    "venue": "ISMIR · 2024",
     "teaser": "Studying music familiarity through EEG.",
     "overview": "This work explores predictive models of music familiarity using EEG, considering fans and non-fans of K-pop group NCT127.",
     "topic": "Music & the brain",
-    "year": 2024
+    "year": 2024,
+    "url": "https://doi.org/10.5281/zenodo.14877461"
   },
   {
     "slug": "biomimetic-membrane",
     "title": "Fast frequency discrimination and phoneme recognition using a biomimetic membrane coupled to a neural network",
     "authors": "WS Lee, H Kim, AN Cleland, KH Ahn",
-    "venue": "Bioinspiration & Biomimetics, 16(2), 026012 \u00b7 2021",
+    "venue": "Bioinspiration & Biomimetics, 16(2), 026012 · 2021",
     "teaser": "Linking a physical model of hearing with neural networks.",
     "overview": "This work couples a biomimetic membrane to a neural network for frequency discrimination and phoneme recognition.",
     "topic": "Computational audition",
-    "year": 2021
+    "year": 2021,
+    "url": "https://doi.org/10.1088/1748-3190/abc869"
   },
   {
     "slug": "vowel-recognition",
     "title": "Origin of the higher difficulty in the recognition of vowels compared to handwritten digits in deep neural networks",
     "authors": "H Kim, WS Lee, J Yoo, M Park, KH Ahn",
-    "venue": "Journal of the Korean Physical Society, 74, 12\u201318 \u00b7 2019",
+    "venue": "Journal of the Korean Physical Society, 74, 12–18 · 2019",
     "teaser": "Comparing speech and visual recognition in deep networks.",
     "overview": "This work investigates differences in the difficulty of recognizing vowels and handwritten digits using deep neural networks.",
     "topic": "Computational audition",
-    "year": 2019
+    "year": 2019,
+    "url": "https://doi.org/10.3938/jkps.74.12"
   }
 ]
