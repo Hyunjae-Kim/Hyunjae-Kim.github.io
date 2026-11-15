@@ -9,7 +9,13 @@ BY_SLUG = {p['slug']: p for p in PAPERS}
 CV = 'assets/Hyunjae-Kim-CV.pdf'
 
 def authors(value):
-    return escape(value).replace('H Kim', '<strong>H Kim</strong>')
+    initials = {'H': 'H.', 'S-B': 'S.-B.', 'KM': 'K. M.', 'R': 'R.', 'S': 'S.', 'J': 'J.', 'T': 'T.', 'M': 'M.', 'EJ': 'E. J.', 'WS': 'W. S.', 'AN': 'A. N.', 'KH': 'K.-H.'}
+    names = []
+    for name in value.split(', '):
+        first, last = name.split(' ', 1)
+        formatted = escape(initials.get(first, first) + ' ' + last)
+        names.append('<strong>' + formatted + '</strong>' if name == 'H Kim' else formatted)
+    return ', '.join(names)
 
 def paper_title(p, selected=False):
     url = p.get('url')
@@ -24,8 +30,8 @@ def paper(p, selected=False):
     ident = '' if selected else f' id="{p["slug"]}"'
     title_tag = 'p' if selected else 'h3'
     return f'''<{tag} class="paper-entry"{ident}>
-  <p class="paper-authors">{authors(p['authors'])}</p>
   <{title_tag} class="paper-title">{paper_title(p, selected)}</{title_tag}>
+  <p class="paper-authors">{authors(p['authors'])}</p>
   <p class="paper-venue">{escape(p['venue'])}</p>
 </{tag}>'''
 
@@ -52,9 +58,10 @@ def shell(title, body, current='About'):
     <p>Music and Brain Lab<br>Graduate School of Culture Technology<br>KAIST</p>
     <p class="location">Daejeon, Republic of Korea</p>
     <div class="profile-links">
-      <a href="mailto:present@kaist.ac.kr">Email <span aria-hidden="true">↗</span></a>
-      <a href="https://www.linkedin.com/in/hyunjae-kim-b79b54151/">LinkedIn <span aria-hidden="true">↗</span></a>
-      <a href="https://github.com/Hyunjae-Kim">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="mailto:present@kaist.ac.kr"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>Email<span class="link-arrow" aria-hidden="true">↗</span></a>
+      <a href="https://www.linkedin.com/in/hyunjae-kim-b79b54151/"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m4 0v-7m0 3a3 3 0 0 1 6 0v4"/><circle cx="7" cy="7" r=".7" fill="currentColor" stroke="none"/></svg>LinkedIn<span class="link-arrow" aria-hidden="true">↗</span></a>
+      <a href="https://github.com/Hyunjae-Kim"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M12 .8a11.4 11.4 0 0 0-3.6 22.2c.6.1.8-.2.8-.5v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.4 5.7.4.4.8 1.1.8 2.2v3.1c0 .3.2.6.8.5A11.4 11.4 0 0 0 12 .8Z"/></svg>GitHub<span class="link-arrow" aria-hidden="true">↗</span></a>
+      <a href="https://scholar.google.com/citations?user=HlWMOPAAAAAJ&amp;hl=en&amp;oi=ao"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2 8 10-5 10 5-10 5-10-5Z"/><path d="M6 10v5c3 3 9 3 12 0v-5M22 8v8"/><path d="M8 20h8"/></svg>Google Scholar<span class="link-arrow" aria-hidden="true">↗</span></a>
     </div>
   </aside>
   <main id="main">{body}</main>
